@@ -258,7 +258,7 @@ fn update(message_tx: &mpsc::Sender<Message>) {
     let name = if cfg!(all(target_os = "windows", not(feature = "pcap"))) {
         "stardb-exporter-pktmon"
     } else {
-        "stardb-exporter"
+        "stardb-exporter-pcap"
     };
 
     thread::spawn(move || {
